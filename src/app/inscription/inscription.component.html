@@ -1,0 +1,75 @@
+<div id="page-content">
+    <!-- Blank Header -->
+    <div class="content-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="header-section">
+                    <h1>Page Title</h1>
+                </div>
+            </div>
+            <div class="col-sm-6 hidden-xs">
+                <div class="header-section">
+                    <ul class="breadcrumb breadcrumb-top">
+                        <li>Extra Pages</li>
+                        <li><a href="">Blank</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Blank Header -->
+
+    <!-- Get Started Block -->
+    <div class="block full">
+        <!-- Get Started Title -->
+        <div class="block-title">
+            <h2>Formulaire D'enregistrement d'une Inscription</h2>
+        </div>
+        <form id=formId (ngSubmit)="enregistrerInscription(formIncription)" class="p-5 grey-text" #formIncription="ngForm">
+          <label class="col-md-3 control-label" for="montant">Saisir le montant reçu</label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-money"></i></span>
+                  <input type="number" id="montant"  class="form-control" placeholder="Nom de la Classe" name="montant" ngModel required>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="eleve">Choisir le code de l'eleve</label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                  <select chosen id="eleve" data-placeholder="Faites un choix.." class="form-control" name="eleve" ngModel required>
+                    <option *ngFor="let eleve of eleves" value="{{ eleve.code }}">{{ eleve.code }}</option>
+                  </select>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="eleve">Choisir le Programme</label>
+          <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                <select chosen id="programme" data-placeholder="Faites un choix.." class="form-control" name="programme" ngModel required>
+                  <option *ngFor="let programme of programmes" value="{{ programme.code }}">{{ programme.nom }}</option>
+                </select>
+            </div>
+          </div>
+          <label class="col-md-3 control-label" for="classe">Choisir la classe</label>
+          <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                <select chosen id="classe" data-placeholder="Faites un choix.." class="form-control" name="classe" ngModel required>
+                  <option *ngFor="let classe of classes" value="{{ classe.code }}">{{ classe.nom }}</option>
+                </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-rounded" [disabled]="formIncription.invalid" >Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+      </form>
+
+    </div>
+    <!-- END Get Started Block -->
+  </div>
+  <!-- END Page Content -->
+
+
+          <!-- Load and execute javascript code used only in this page -->
+          <script src="assets/js/pages/formsComponents.js"></script>
+          <script>$(function(){ FormsComponents.init(); });</script>

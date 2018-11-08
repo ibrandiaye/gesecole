@@ -1,0 +1,111 @@
+<div id="page-content">
+    <!-- Blank Header -->
+    <div class="content-header">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="header-section">
+                    <h1>Page Title</h1>
+                </div>
+            </div>
+            <div class="col-sm-6 hidden-xs">
+                <div class="header-section">
+                    <ul class="breadcrumb breadcrumb-top">
+                        <li>Extra Pages</li>
+                        <li><a href="">Blank</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Blank Header -->
+
+    <!-- Get Started Block -->
+    <div class="block full">
+        <!-- Get Started Title -->
+        <div class="block-title">
+            <h2>Formulaire D'enregistrement d'une Classe</h2>
+        </div>
+        <form id="formId" (ngSubmit)="insererEleve(formEleve)" class="p-5 grey-text" #formEleve="ngForm">
+            <label class="col-md-3 control-label" for="nomE">Nom eleve</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                    <input type="text" id="nomE" name="nomE" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="prenomE">¨Prenom eleve</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                        <input type="text" id="prenomE" name="prenomE" class="form-control" placeholder="Nom du programme" ngModel required>
+                    </div>
+                </div>
+            <label class="col-md-3 control-label" for="adresseE">Adresse eleve</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-shop"></i></span>
+                    <input type="text" id="adresseE" name="adresseE" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="telephoneE">Telephone élève</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-iphone"></i></span>
+                    <input type="text" id="telephoneE" name="telephoneE" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="naissanceE"> Date de Naissanse</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-calendar"></i></span>
+                    <input type="date" id="naissanceE" name="naissanceE" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="lieuE">Lieu de Naissance</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-shop"></i></span>
+                    <input type="text" id="lieuE" name="lieuE" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="image">Choisir Une Image</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-shop"></i></span>
+                    <input type="file" id="image" name="image" class="form-control"  (change)="onFileChange($event)" #image>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="nomT">Nom Tuteur</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                    <input type="text" id="nomT" name="nomT" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="prenomT">Prenom Tuteur</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                    <input type="text" id="prenomT" name="prenomT" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="adresseT">Adresse Tuteur</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-shop"></i></span>
+                    <input type="text" id="adresseT" name="adresseT" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <label class="col-md-3 control-label" for="telephoneT">Telephone tuteur</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-iphone"></i></span>
+                    <input type="text" id="telephoneT" name="telephoneT" class="form-control" placeholder="Nom du programme" ngModel required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-rounded" [disabled]="formEleve.invalid" >Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+        </form>
+
+  </div>
+</div>
+

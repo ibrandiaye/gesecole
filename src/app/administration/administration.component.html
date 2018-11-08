@@ -1,0 +1,76 @@
+<div id="page-content">
+  <!-- Blank Header -->
+  <div class="content-header">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="header-section">
+                  <h1>Page Title</h1>
+              </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+              <div class="header-section">
+                  <ul class="breadcrumb breadcrumb-top">
+                      <li>Extra Pages</li>
+                      <li><a href="">Blank</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- END Blank Header -->
+
+  <!-- Get Started Block -->
+  <div class="block full">
+      <!-- Get Started Title -->
+      <div class="block-title">
+          <h2>Formulaire D'enregistrement d'une Administrateur</h2>
+      </div>
+      <form id=formId (ngSubmit)="insererAdministration(formAdm)" class="p-5 grey-text" #formAdm="ngForm">
+          <label class="col-md-3 control-label" for="nom">Nom </label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                  <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom du programme" ngModel required>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="prenom">¨Prenom </label>
+              <div class="col-md-9">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="gi gi-user"></i></span>
+                      <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Nom du programme" ngModel required>
+                  </div>
+              </div>
+          <label class="col-md-3 control-label" for="adresse">Adresse </label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-shop"></i></span>
+                  <input type="text" id="adresse" name="adresse" class="form-control" placeholder="Nom du programme" ngModel required>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="telephone">Telephone </label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-iphone"></i></span>
+                  <input type="text" id="telephone" name="telephone" class="form-control" placeholder="Nom du programme" ngModel required>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="email">Email </label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-iphone"></i></span>
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Nom du programme" ngModel required>
+              </div>
+          </div>
+          <label class="col-md-3 control-label" for="poste">Poste</label>
+          <div class="col-md-9">
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="gi gi-iphone"></i></span>
+                  <input type="text" id="poste" name="poste" class="form-control" placeholder="Nom du programme" ngModel required>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-rounded" [disabled]="formAdm.invalid" >Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+      </form>
+
+</div>
+</div>
+

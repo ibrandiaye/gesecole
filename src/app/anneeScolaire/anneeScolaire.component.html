@@ -1,0 +1,75 @@
+<div id="page-content">
+  <!-- Blank Header -->
+  <div class="content-header">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="header-section">
+                  <h1>Page Title</h1>
+              </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+              <div class="header-section">
+                  <ul class="breadcrumb breadcrumb-top">
+                      <li>Extra Pages</li>
+                      <li><a href="">Blank</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- END Blank Header -->
+
+  <!-- Get Started Block -->
+  <div class="block full">
+      <!-- Get Started Title -->
+      <div class="block-title">
+          <h2>Formulaire D'enregistrement d'une classe</h2>
+      </div>
+            <form id="formId" (ngSubmit)="ajouterAnneScolaire(formas)"  class="p-5 grey-text" #formas="ngForm">
+                <label class="col-md-3 control-label" for="example-input1-group1">Date Debut</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-calendar"></i></span>
+                        <input type="date" id="dateDebut" name="dateDebut" class="form-control" placeholder="dd/mm/yy" ngModel required>
+                    </div>
+                </div>
+                <label class="col-md-3 control-label" for="example-input1-group1">Date Fin</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-calendar"></i></span>
+                        <input type="date" id="dateFin" name="dateFin" class="form-control " ngModel required>
+                    </div>
+                </div>
+            <label class="col-md-3 control-label" for="example-input2-group2">Choisir le Statut</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                  <select id="statut" class="form-control" name="statut" placeholder="choisir" ngModel required >
+                      <option>en cours</option>
+                      <option>terminé</option>
+                  </select>
+                </div>
+            </div>
+            <!-- Chosen plugin (class is initialized in js/app.js -> uiInit()), for extra usage examples you can check out http://harvesthq.github.io/chosen/ -->
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="example-chosen">Chosen</label>
+                <div class="col-md-5">
+                    <select id="example-chosen" name="example-chosen" class="select-chosen" data-placeholder="Choose a Country.." style="width: 250px;" ngModel >
+                        <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Aland Islands">Aland Islands</option>
+                    </select>
+                  </div>
+              </div>
+
+            <button type="submit" class="btn btn-primary btn-rounded"  [disabled]="formas.invalid">Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+          </form>
+        </div>
+        <!-- END Get Started Block -->
+      </div>
+      <!-- END Page Content -->
+
+
+             

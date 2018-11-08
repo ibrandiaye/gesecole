@@ -1,0 +1,57 @@
+<div id="page-content">
+  <!-- Blank Header -->
+  <div class="content-header">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="header-section">
+                  <h1>Page Title</h1>
+              </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+              <div class="header-section">
+                  <ul class="breadcrumb breadcrumb-top">
+                      <li>Extra Pages</li>
+                      <li><a href="">Blank</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- END Blank Header -->
+
+  <!-- Get Started Block -->
+  <div class="block full">
+      <!-- Get Started Title -->
+      <div class="block-title">
+          <h2>Formulaire D'enregistrement d'une classe</h2>
+      </div>
+      <form id=formId (ngSubmit)="enregistrerClasse(formClasse)" class="p-5 grey-text" #formClasse="ngForm">
+        <label class="col-md-3 control-label" for="example-input1-group1">Nom Classe</label>
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-keyboard-wireless"></i></span>
+                <input type="text" id="example-input1-group1"  class="form-control" placeholder="Nom de la Classe" name="nomC" ngModel required>
+            </div>
+        </div>
+        <label class="col-md-3 control-label" for="example-input2-group2">Choisir le Niveau</label>
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                <select id="niveau" data-placeholder="Faites un choix.." class="form-control" name="niveau" ngModel required>
+                  <option *ngFor="let niveau of niveaus" value="{{ niveau.code }}">{{ niveau.nom }}</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-rounded" [disabled]="formClasse.invalid" >Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+    </form>
+
+  </div>
+  <!-- END Get Started Block -->
+</div>
+<!-- END Page Content -->
+
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="assets/js/pages/formsComponents.js"></script>
+        <script>$(function(){ FormsComponents.init(); });</script>

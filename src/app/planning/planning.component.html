@@ -1,0 +1,77 @@
+<div id="page-content">
+  <!-- Blank Header -->
+  <div class="content-header">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="header-section">
+                  <h1>Page Title</h1>
+              </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+              <div class="header-section">
+                  <ul class="breadcrumb breadcrumb-top">
+                      <li>Extra Pages</li>
+                      <li><a href="">Blank</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- END Blank Header -->
+
+  <!-- Get Started Block -->
+  <div class="block full">
+      <!-- Get Started Title -->
+      <div class="block-title">
+          <h2>Formulaire D'enregistrement d'une Planning</h2>
+      </div>
+      <form id="formId" (ngSubmit)="enregistrerPlanning(formPlanning)" class="p-5 grey-text" #formPlanning="ngForm">
+        <label class="col-md-3 control-label" for="heureDebut">Choisir l'heure debut</label>
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-keyboard-wired"></i></span>
+                <input type="time" id="heureDebut"  class="form-control" placeholder="Choisir la date" name="heureDebut" ngModel required>
+            </div>
+        </div>
+        <label class="col-md-3 control-label" for="heureFin">Choisir l'heure de fin</label>
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-keyboard-wired"></i></span>
+                <input type="time" id="heureFin"  class="form-control" placeholder="Choisir la date" name="heureFin" ngModel required>
+            </div>
+        </div>
+        <label class="col-md-3 control-label" for="professeur">Choisir le matiere</label>
+        <div class="col-md-9">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+                <select chosen id="matiere" data-placeholder="Faites un choix.." class="form-control" name="matiere" ngModel required>
+                  <option *ngFor="let matiere of matieres" value="{{ matiere.code }}">{{ matiere.nom }}</option>
+                </select>
+            </div>
+        </div>
+        <label class="col-md-3 control-label" for="jour">Choisir le jour</label>
+        <div class="col-md-9">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="gi gi-ok_2"></i></span>
+              <select chosen id="jour" data-placeholder="Faites un choix.." class="form-control" name="jour" ngModel required>
+                <option value="lundi">lundi</option>
+                <option value="mardi">mardi</option>
+                <option value="mercredi">mercredi</option>
+                <option value="jeudi">jeudi</option>
+                <option value="lundi">vendredi</option>
+                <option value="lundi">samedi</option>
+              </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-rounded" [disabled]="formPlanning.invalid" >Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+      </form>
+
+  </div>
+
+
+  <!-- END Page Content -->
+</div>
+
+        <!-- Load and execute javascript code used only in this page -->
+        <script src="assets/js/pages/formsComponents.js"></script>
+        <script>$(function(){ FormsComponents.init(); });</script>

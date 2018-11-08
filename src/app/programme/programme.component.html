@@ -1,0 +1,59 @@
+<div id="page-content">
+  <!-- Blank Header -->
+  <div class="content-header">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="header-section">
+                  <h1>Page Title</h1>
+              </div>
+          </div>
+          <div class="col-sm-6 hidden-xs">
+              <div class="header-section">
+                  <ul class="breadcrumb breadcrumb-top">
+                      <li>Extra Pages</li>
+                      <li><a href="">Blank</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- END Blank Header -->
+
+  <!-- Get Started Block -->
+  <div class="block full">
+      <!-- Get Started Title -->
+      <div class="block-title">
+          <h2>Formulaire D'enregistrement d'une Programme</h2>
+      </div>
+            <form id="formId" (ngSubmit)="ajouterProgramme(formprog)"  class="p-5 grey-text" #formprog="ngForm">
+                <label class="col-md-3 control-label" for="nom">Nom du Programme</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-keyboard-wireless"></i></span>
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom du programme" ngModel required>
+                    </div>
+                </div>
+                <label class="col-md-3 control-label" for="dateCreation">Date Creation</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-calendar"></i></span>
+                        <input type="date" id="dateCreation" name="dateCreation" class="form-control" placeholder="dd/mm/yy" ngModel required>
+                    </div>
+                </div>
+                <label class="col-md-3 control-label" for="dateFin">Date Fin</label>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="gi gi-calendar"></i></span>
+                        <input type="date" id="dateFin" name="dateFin" class="form-control " ngModel required>
+                    </div>
+                </div>
+
+            <button type="submit" class="btn btn-primary btn-rounded"  [disabled]="formprog.invalid">Enregistrer<i class="fa fa-paper-plane-o ml-1"></i></button>
+          </form>
+        </div>
+        <!-- END Get Started Block -->
+      </div>
+      <!-- END Page Content -->
+
+
+
